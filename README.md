@@ -26,7 +26,7 @@ curl localhost/.well-known/matrix/client
 # should return {"m.homeserver":{"base_url":"https://domain.io"}}
 
 # using docker
-docker run --rm -ti -e MX_HOSTNAME=domain.io fabiandeifuss/tinytrix
+docker run --rm -ti -e MX_HOSTNAME=domain.io ghcr.io/fabius/tinytrix
 
 # using docker-compose.yml
 version: "3"
@@ -45,7 +45,7 @@ services:
   tinytrix:
     depends_on:
       - traefik
-    image: tiny
+    image: ghcr.io/fabius/tinytrix
     restart: always
     environment:
       - MX_HOSTNAME=actix
