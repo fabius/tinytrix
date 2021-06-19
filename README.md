@@ -48,7 +48,7 @@ services:
     image: ghcr.io/fabius/tinytrix
     restart: always
     environment:
-      - MX_HOSTNAME=actix
+      - MX_HOSTNAME=domain.io
     labels:
       - traefik.enable=true
       # route requests going to domain.io/.well-known/* over to tinytrix
